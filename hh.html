@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #box
+        {
+            width:100px;
+            height:100px;
+            background-color:hotpink;
+        }
+    </style>
+    <script>
+        window.onload = function () 
+        {
+            var oBtn = document.getElementById("btn");
+            var oBox = document.getElementById("box");
+
+            oBtn.onclick = function () 
+            {
+                //获取2个文本框的值（也就是输入的内容）
+                var txt = document.getElementById("txt").value;
+                oBox.style.cssText = txt;
+            };
+        }
+    </script>
+    <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="41c3d115-be7a-4800-877f-09e01afc2f4f";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+</head>
+<body>
+    <input id="txt" type="text"/>
+    <input id="btn" type="button" value="设置" />
+    <div id="box"></div>
+</body>
+</html>
